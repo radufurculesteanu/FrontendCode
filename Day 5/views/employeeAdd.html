@@ -9,6 +9,10 @@
                     <!--TODO#HR3-->
                     <div class="form-group" >
                         <!--TODO#HR2-->
+                        <p>
+                            <label for="firstName">First name:</label>
+                            <input id="firstName" class="form-control" ng-model="employee.firstName" required>
+                        </p>
 
                     </div>
                 </div>
@@ -16,6 +20,10 @@
                     <!--TODO#HR3-->
                     <div class="form-group">
                         <!--TODO#HR2-->
+                        <p>
+                            <label of="lastName">Last Name:</label>
+                            <input id="lastName" class="form-control" ng-model="employee.lastName" required>
+                        </p>
 
                     </div>
                 </div>
@@ -25,6 +33,10 @@
                     <!--TODO#HR3-->
                     <div class="form-group">
                         <!--TODO#HR2-->
+                        <p>
+                            <label for="email">Email:</label>
+                            <input id="email" class="form-control" ng-model="employee.email" required>
+                        </p>
 
                     </div>
                 </div>
@@ -32,6 +44,35 @@
                     <!--TODO#HR3-->
                     <div class="form-group">
                         <!--TODO#HR2-->
+                        <p>
+                            <label for="phoneNumber">Phone number:</label>
+                            <input id="phoneNumber" class="form-control" ng-model="employee.phoneNumber" required>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <!--TODO#HR3-->
+                    <div class="form-group" >
+                        <!--TODO#HR2-->
+                        <p>
+                            <label for="jobId">Job:</label>
+                            <select ng-model="employee.jobId" id="jobId" ng-options="job.jobTitle for job in jobs"></select>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!--TODO#HR3-->
+                    <div class="form-group">
+                        <!--TODO#HR2-->
+                        <p>
+                            <label for="departmentId">Department:</label>
+                            <select ng-model="employee.departmentId" id="departmentId" ng-options="department.departmentName for department in departments"></select>
+                        </p>
 
                     </div>
                 </div>
@@ -52,6 +93,11 @@
                     <!--TODO#HR3-->
                     <div class="form-group">
                         <!--TODO#HR2-->
+                        <p>
+                        <label for="salary">Salary:</label>
+                        <input id="salary" class="form-control" ng-model="employee.salary" required>
+                        </p>
+
                     </div>
                 </div>
             </div>
@@ -91,6 +137,9 @@
                     </div>
                 </div>
             </div>
+            <button ng-click="create(employee)" ng-disabled="employee.employeeAddForm.$invalid">Add employee</button>
+            <button ng-click="reset()">Reset</button>
+
             <div class="row">
                 <div class="col-md-5"></div>
                 <div class="col-md-7">
